@@ -100,7 +100,7 @@
             padding: 0 20px;
         }
 
-        /* 이 페이지 전용: 가운데 한 카드만 보이게 */
+        /* 가운데 한 카드만 보이게 */
         .content-single {
             display: flex;
             justify-content: center;

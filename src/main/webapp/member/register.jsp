@@ -17,7 +17,7 @@
     body {
         font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
         background: linear-gradient(180deg, #f3f7ff 0%, #f6f8ff 55%, #f1f5ff 100%);
-        color: #334155;
+        color: #1f2937;
     }
 
     a {
@@ -31,14 +31,15 @@
         flex-direction: column;
     }
 
+    /* HEADER ------------------------------------------------------ */
     header {
         padding: 14px 32px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: linear-gradient(90deg, #90c5ff, #6aa9ff); /* 로그인과 동일 */
+        background: linear-gradient(90deg, #5b8def, #5fa4ff); /* 메인/수정과 통일 */
         color: #ffffff;
-        box-shadow: 0 8px 20px rgba(148, 163, 184, 0.35);
+        box-shadow: 0 8px 20px rgba(15, 23, 42, 0.28);
     }
 
     .title-wrap {
@@ -50,7 +51,7 @@
     .title {
         font-size: 22px;
         font-weight: 700;
-        letter-spacing: 0.03em;
+        letter-spacing: 0.02em;
     }
 
     .subtitle {
@@ -72,20 +73,20 @@
     .nav-pill {
         padding: 7px 14px;
         border-radius: 999px;
-        border: 1px solid rgba(248, 250, 252, 0.7);
-        background: rgba(248, 250, 252, 0.18);
-        color: #ffffff;
-        font-size: 13px;
+        background: rgba(248, 250, 252, 0.12);
+        border: 1px solid rgba(226, 232, 240, 0.7);
+        color: #f9fafb;
         font-weight: 500;
-        transition: all 0.18s ease-in-out;
+        transition: all 0.16s ease-in-out;
     }
 
     .nav-pill:hover {
-        background: rgba(248, 250, 252, 0.28);
+        background: rgba(248, 250, 252, 0.26);
+        box-shadow: 0 6px 14px rgba(15, 23, 42, 0.22);
         transform: translateY(-1px);
-        box-shadow: 0 6px 16px rgba(15, 23, 42, 0.22);
     }
 
+    /* MAIN -------------------------------------------------------- */
     .content {
         flex: 1;
         display: flex;
@@ -178,6 +179,7 @@
         gap: 8px;
     }
 
+    /* BUTTONS ----------------------------------------------------- */
     .btn {
         display: inline-flex;
         align-items: center;
@@ -213,6 +215,7 @@
         background: #f1f5f9;
     }
 
+    /* FOOTER ------------------------------------------------------ */
     footer {
         border-top: 1px solid rgba(148, 163, 184, 0.25);
         padding: 12px 0 18px;
@@ -221,9 +224,14 @@
         text-align: center;
     }
 
+    /* 반응형 ------------------------------------------------------ */
     @media (max-width: 640px) {
         header {
             padding: 12px 18px;
+        }
+
+        .title {
+            font-size: 18px;
         }
 
         .card {
@@ -245,6 +253,7 @@
 <body>
 <div class="page-wrapper">
 
+    <!-- HEADER -->
     <header>
         <div class="title-wrap">
             <div class="title">게시판</div>
@@ -265,6 +274,7 @@
         </nav>
     </header>
 
+    <!-- MAIN -->
     <main class="content">
         <section class="card">
             <div class="card-title">회원가입</div>
@@ -318,11 +328,10 @@
         </section>
     </main>
 
+    <!-- FOOTER -->
     <footer>
         © 2025 게시판. All rights reserved.
     </footer>
 </div>
 </body>
 </html>
-
-

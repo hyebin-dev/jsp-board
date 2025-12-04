@@ -121,7 +121,7 @@
             font-size: 11px;
             font-weight: 600;
             letter-spacing: 0.16em;
-            text-transform: uppercase;
+            /* text-transform 제거해서 'log in' 그대로 보이게 */
             color: #64748b;
             margin-bottom: 4px;
         }
@@ -147,6 +147,11 @@
             display: flex;
             flex-direction: column;
             margin-bottom: 14px;
+        }
+
+        /* 비밀번호 필드는 살짝 더 아래에서 시작 */
+        .form-row--password {
+            margin-top: 4px;
         }
 
         .form-row label {
@@ -297,7 +302,7 @@
     <!-- MAIN -->
     <main class="content">
         <section class="card login-card">
-            <div class="card-eyebrow">LOG IN</div>
+            <div class="card-eyebrow">log in</div>
             <div class="card-title">로그인</div>
             <div class="card-desc">
                 아이디와 비밀번호를 입력하고, 나만의 게시판 공간을 이용해 보세요.
@@ -309,7 +314,7 @@
                     <label for="login-id">아이디</label>
                     <input id="login-id" type="text" name="id" placeholder="아이디를 입력하세요.">
                 </div>
-                <div class="form-row">
+                <div class="form-row form-row--password">
                     <label for="login-pwd">비밀번호</label>
                     <input id="login-pwd" type="password" name="pwd" placeholder="비밀번호를 입력하세요.">
                 </div>
