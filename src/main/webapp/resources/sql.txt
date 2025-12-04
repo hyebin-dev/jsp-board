@@ -1,0 +1,68 @@
+-- 2025-11-26
+-- DB 생성
+
+-- root 계정으로 생성
+-- jspdb / jspuser / mysql
+
+create database jspdb;
+
+use mysql
+-- user 생성
+create user 'jspuser'@'localhost' identified by 'mysql';
+grant all privileges on jspdb.* to 'jspuser'@'localhost';
+flush privileges;
+
+-- jspuser 로 접속
+-- board 테이블 생성
+create table board(
+bno int not null auto_increment,
+title varchar(100) not null,
+writer varchar(100) not null,
+content text,
+regdate datetime default now(),
+moddate datetime default now(),
+primary key(bno)
+);
+
+-- 2025-11-27
+-- comment 테이블 생성
+create table comment(
+cno int not null auto_increment,
+bno int not null, 
+writer varchar(100) not null,
+content varchar(1000) not null,
+regdate datetime default now(),
+primary key(cno)
+);
+
+-- 2025-12-01
+alter table board add imagefile varchar(500);
+
+-- 2025-12-02
+-- id/pw/email/phone/regdate/lastlogin
+create table user(
+id varchar(100) not null,
+pwd varchar(100) not null,
+email varchar(100) not null,
+phone varchar(50),
+regdate datetime default now(),
+lastlogin datetime default now(),
+primary key(id));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
